@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%; height: 100vh; background: url(&quot;assets/img/background.webp&quot;) center / cover repeat, rgba(0, 0, 0, 0); margin: 0; padding: 0; overflow: hidden;">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>SWKG</title>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+  <link rel="stylesheet" href="assets/css/Background.css">
+  <link rel="stylesheet" href="assets/css/chat.css">
+  <link rel="stylesheet" href="assets/css/GamePanel.css">
+  <link rel="stylesheet" href="assets/css/tileback.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/filem.css">
+
+</head>
+
+<body style="background: rgba(255, 255, 255, 0); height: 100vh; width: 100%; overflow: hidden;">
+  <img style="width: 100%; height: 100vh; background: url(&quot;assets/img/tile.png&quot;) center / auto repeat; position: absolute; overflow: hidden; opacity: 0.09; text-align: left; z-index: -1; animation: slideAnima 190000s linear infinite;">
+  <strong style="color: rgb(255, 255, 255); font-size: 60px; margin: 10px; position: fixed;">
+    <img src="assets/img/logo.webp" width="38" height="61" style="margin: 13px;">SWKG
+    <div class="navigation-panel">
+      <button id="gamesButton" class="btn btn-primary">ИГРЫ</button>
+      <button id="chatButton" class="btn btn-primary">ЧАТ</button>
+      <button id="filesButton" class="btn btn-primary">ФАЙЛЫ</button>
+    </div>
+  </strong>
+
+  <!-- Навигационная панелька с кнопками -->
+  
+  <div>
+    <div class="tab-content">
+      <!-- ЭКРАН ИГРЫ -->
+      <div class="tab-pane fade show active" role="tabpanel" id="tab-1">
+        <main style="width: 100%; height: 100%; right: 50%; left: 50%;">
+          <div class="game-panel-container">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <div id="list-widget" style="display: none;"></div>
+            <script src="assets/js/gamepanel.js"></script>
+          </div>
+        </main>
+      </div>
+      
+      <!-- ЭКРАН ЧАТА -->
+      <div class="tab-pane fade" role="tabpanel" id="tab-2">
+        <main style="width: 100%; height: 100%;">
+          <div class="col" style="width: 100vh; height: 100vh;">
+            <div class="row">
+            </div> 
+
+            <div class="chat-container">
+               <!-- Здесь размещаем блок с паролем и скрипт для его проверки -->
+               <div class="password-wrapper" id="passwordWrapper">
+                <div class="password-container">
+                  <label for="password">Введите пароль:</label>
+                  <div class="password-input">
+                    <input type="password" id="password" />
+                    <button onclick="checkPassword()"><i class="fas fa-sign-in-alt"></i></button>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col text-center chat-info">
+                <h2>ЧАТ</h2>
+                <p>/regtg начать</p>
+                <p>/reg chatId регистрация</p>
+                <p>/bot chatId сообщение</p>
+                <!-- <p>/clear TELEGRAM_ID удаление</p> -->
+              </div>    
+              <div class="chat-messages" id="chatMessages">
+                <div class="chat-message sent">
+                </div>
+                <div class="chat-message received">
+                </div>
+              </div>
+              <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Cообщение...">
+                <button id="sendButton">
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+            <script src="assets/js/chat.js"></script>
+          </div>
+        </div>
+        </main>
+      </div>
+
+      <!-- ЭКРАН ФАЙЛОВ -->
+      <div class="tab-pane fade" role="tabpanel" id="tab-3">
+        <main style="width: 100%; height: 100%;">
+          <div class="filem-container">
+            <div class="col text-center chat-info">
+              <h2>ФАЙЛЫ</h2>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+  
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/TabSwitch.js"></script>
+
+</body>
+</html>
