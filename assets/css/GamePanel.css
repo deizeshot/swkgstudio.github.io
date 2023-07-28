@@ -147,27 +147,10 @@
   pointer-events: none;
 }
 
-/* Медиа-запрос для уменьшения панели на маленьких экранах (телефонах)
-@media (max-width: 768px) {
+@media (max-width: 768px) and (max-height: 600px) {
   .game-panel-container {
     max-width: 400px;
     max-height: 300px;
-  }
-
-  .button-list.horizontal li {
-    width: calc(50% - 10px);
-  }
-  
-  .button-list li {
-    height: 50px;
-  }
-} */
-
-/* Медиа-запрос для уменьшения панели на очень маленьких экранах (например, смартфонах) */
-@media (max-width: 480px) and (max-height: 600px) {
-  .game-panel-container {
-    max-width: 200px;
-    max-height: 150px;
   }
 
   .button-list.horizontal li {
@@ -197,4 +180,3 @@
     white-space: nowrap;
   }
 }
-
