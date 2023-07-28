@@ -147,3 +147,14 @@
   pointer-events: none;
 }
 
+/* Медиа-запрос для уменьшения панели на маленьких экранах (телефонах) */
+@media (max-width: 768px) {
+  .game-panel-container {
+    max-width: 400px;
+    max-height: 300px;
+  }
+
+  .button-list.horizontal li {
+    width: calc(50% - 10px);
+  }
+}
