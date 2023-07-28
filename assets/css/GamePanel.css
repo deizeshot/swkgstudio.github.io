@@ -179,4 +179,16 @@
   .button-list li {
     height: 30px;
   }
+
+  /* Уменьшаем размер изображений внутри кнопок */
+  .button-list.horizontal li img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+
+  /* Отключаем перенос текста на новую строку */
+  .button-list.horizontal li button span {
+    white-space: nowrap;
+  }
 }
