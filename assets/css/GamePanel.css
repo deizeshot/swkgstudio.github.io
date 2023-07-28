@@ -162,3 +162,21 @@
     height: 50px;
   }
 }
+
+/* Медиа-запрос для уменьшения панели на очень маленьких экранах (например, смартфонах) */
+@media (max-width: 480px) {
+  .game-panel-container {
+    max-width: 250px;
+    max-height: 150px;
+  }
+
+  .button-list.horizontal li {
+    width: 100%;
+    margin-right: 0;
+  }
+  
+  /* Уменьшаем высоту кнопок на очень маленьких экранах */
+  .button-list li {
+    height: 30px;
+  }
+}
