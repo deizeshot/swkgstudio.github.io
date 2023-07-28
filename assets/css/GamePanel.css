@@ -164,7 +164,7 @@
 }
 
 /* Медиа-запрос для уменьшения панели на очень маленьких экранах (например, смартфонах) */
-@media (max-width: 480px) and (max-height: 480px) {
+@media (max-width: 480px) and (max-height: 600px) {
   .game-panel-container {
     max-width: 200px;
     max-height: 150px;
@@ -180,6 +180,11 @@
     height: 30px;
   }
 
+  /* Устанавливаем ширину кнопок равной высоте, чтобы сделать их квадратными */
+  .button-list li button {
+    width: 100%;
+  }
+
   /* Уменьшаем размер изображений внутри кнопок */
   .button-list.horizontal li img {
     max-width: 100%;
@@ -192,3 +197,4 @@
     white-space: nowrap;
   }
 }
+
