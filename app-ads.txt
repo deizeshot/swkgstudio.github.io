@@ -1,0 +1,5 @@
+# Для Яндекса
+yandex.com, [Publisher ID], DIRECT, [Seller Account ID]
+
+# Для Google AdSense
+google.com, [Publisher ID], DIRECT, [Seller Account ID]
